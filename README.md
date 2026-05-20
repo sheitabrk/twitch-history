@@ -7,6 +7,10 @@ Twitch has no record of what you've watched. This extension keeps one locally:
 every channel and replay you open is logged with its watch time, and a full-page
 history view is added straight into the Twitch UI.
 
+![The Watch History view opened over a Twitch stream](Screenshot2.png)
+
+*The full-page history view, opened on top of Twitch.*
+
 ## Features
 
 - Records every channel and VOD you watch, along with how long you watched
@@ -27,6 +31,10 @@ The extension is loaded unpacked:
 3. Click **Load unpacked** and select the project folder.
 4. Open [twitch.tv](https://www.twitch.tv) — a **History** entry appears in the
    left sidebar. The toolbar icon opens the same view.
+
+![The History button added to Twitch's left sidebar](Screenshot1.png)
+
+*A "History" entry is added to Twitch's own sidebar.*
 
 ## How it works
 
