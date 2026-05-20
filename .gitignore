@@ -1,0 +1,16 @@
+# Claude Code / local tooling
+.claude/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Packaged builds
+*.zip
+node_modules/

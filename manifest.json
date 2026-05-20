@@ -1,0 +1,61 @@
+{
+  "manifest_version": 3,
+  "name": "Twitch History",
+  "version": "1.0.0",
+  "description": "Adds a Watch History feature to Twitch, similar to YouTube's history.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.twitch.tv/*",
+    "https://twitch.tv/*",
+    "https://gql.twitch.tv/*"
+  ],
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.twitch.tv/*",
+        "https://twitch.tv/*"
+      ],
+      "js": ["src/content/interceptor.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://www.twitch.tv/*",
+        "https://twitch.tv/*"
+      ],
+      "js": [
+        "src/utils/helpers.js",
+        "src/storage/storage-manager.js",
+        "src/content/router.js",
+        "src/content/tracker.js",
+        "src/content/history-view.js",
+        "src/content/sidebar.js",
+        "src/content/content.js"
+      ],
+      "css": [
+        "src/styles/history-view.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "32": "assets/icons/icon32.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "32": "assets/icons/icon32.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    },
+    "default_title": "Twitch History",
+    "default_popup": "src/popup/popup.html"
+  }
+}

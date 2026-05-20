@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Twitch History</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="popup">
+    <header class="popup__header">
+      <span class="popup__icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M13 3a9 9 0 1 0 9 9h-2a7 7 0 1 1-7-7V3z" fill="currentColor"/>
+          <path d="M12 7v5l3 3-1.5 1.5L10 13V7h2z" fill="currentColor"/>
+        </svg>
+      </span>
+      <h1 class="popup__title">Twitch History</h1>
+    </header>
+
+    <div class="popup__body">
+      <p class="popup__desc">
+        Navigate to <strong>twitch.tv</strong> and click the
+        <strong>History</strong> button in the sidebar to view your watch history.
+      </p>
+
+      <div class="popup__stats" id="popup-stats">
+        <div class="stat">
+          <span class="stat__value" id="stat-count">—</span>
+          <span class="stat__label">sessions recorded</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value" id="stat-time">—</span>
+          <span class="stat__label">total watch time</span>
+        </div>
+      </div>
+
+      <button class="popup-btn popup-btn--primary" id="open-twitch-btn">
+        Open Twitch
+      </button>
+    </div>
+
+    <footer class="popup__footer">
+      <span>v1.0.0</span>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
